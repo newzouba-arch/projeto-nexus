@@ -751,14 +751,14 @@
     <h2 class="section-title">Agende seu<br /><em>diagnóstico gratuito.</em></h2>
     <p>15 minutos para entender o que sua presença digital precisa. Sem compromisso, sem pressão.</p>
 
-    <form onsubmit="handleForm(event)">
+    <form action="https://formspree.io/f/xaqvvlpn" method="POST">
       <div class="form-group">
         <label>Nome completo</label>
-        <input type="text" placeholder="Dr. João Silva" required />
+        <input type="text" name="nome" placeholder="Dr. João Silva" required />
       </div>
       <div class="form-group">
         <label>Profissão</label>
-        <select required>
+        <select name="profissao" required>
           <option value="" disabled selected>Selecione sua área</option>
           <option>Médico(a)</option>
           <option>Dentista</option>
@@ -769,17 +769,16 @@
       </div>
       <div class="form-group">
         <label>WhatsApp</label>
-        <input type="tel" placeholder="(11) 99999-9999" required />
+        <input type="tel" name="whatsapp" placeholder="(11) 99999-9999" required />
       </div>
       <div class="form-group">
         <label>Como posso ajudar?</label>
-        <textarea placeholder="Conte brevemente o que você precisa..."></textarea>
+        <textarea name="mensagem" placeholder="Conte brevemente o que você precisa..." required></textarea>
       </div>
       <button type="submit" class="submit-btn" id="submitBtn">Enviar Diagnóstico</button>
     </form>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Projeto Nexus — Newton Zoubaref</div>
